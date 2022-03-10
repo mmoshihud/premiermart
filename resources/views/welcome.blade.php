@@ -4,12 +4,12 @@
     <div class="page-container">
         <div class="first-row">
             <div class="container">
-                <ul>
-                    <li>Electronic Devices</li>
-                    <li>Consumer Electronics</li>
-                    <li>Sexy toys for men</li>
-                    <li>Bags</li>
-                    <li>Kids</li>
+                <ul class="ul-items">
+                    <li class="list-items">Electronic Devices</li>
+                    <li class="list-items">Consumer Electronics</li>
+                    <li class="list-items">Men's Fashion</li>
+                    <li class="list-items">Women's Wear</li>
+                    <li class="list-items">Kids</li>
                 </ul>
             </div>
         </div>

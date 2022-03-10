@@ -1,12 +1,14 @@
-<div class="footer-div">
-    <footer class="ft-div">
-        <ul>
-            <li>All Department</li>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Help</li>
-            <li>Contact US</li>
+<div class="footer-main">
+    <div class="footer-blue">
+        <ul class="footer-items">
+            <li><a class="footer-list" href="#">All Department</a></li>
+            <li><a class="footer-list" href="#">About Us</a></li>
+            <li><a class="footer-list" href="#">All Department</a></li>
+            <li><a class="footer-list" href="#">Careers</a></li>
+            <li><a class="footer-list" href="#">Help</a></li>
+            <li><a class="footer-list" href="#">Contact US</a></li>
         </ul>
-        <p>&copy; 2042 Premere Mart. All right reserved</p>
-    </footer>
+    </div>
+
 </div>
+<div class="footer-end">&copy; 2022 Walmart. All Rights Reserved.</div>
