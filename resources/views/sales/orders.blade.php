@@ -8,6 +8,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th></th>
 
             </tr>
             <tr>
@@ -16,6 +17,7 @@
                 <td>{{ $name }}</td>
                 <td>{{ $price }}</td>
                 <td>{{ $quantity }}</td>
+                <td><a href="#">Sell</a></td>
             </tr>
         </table>
     </div>
