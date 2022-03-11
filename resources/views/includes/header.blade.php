@@ -6,8 +6,8 @@
         <a class="nav-item" href="#">About</a>
         <input type="search" name="search" placeholder="Search everything at premire mart"
             style="height: 50px; width: 500px" />
-        <a class="btn" href="#"><button>Profile</button></a>
-        <a class="btn" href="#"><button>Log in</button></a>
-        <a class="btn" href="#"><button>Cart</button></a>
+        <a class="button-main" href="#">Profile</a>
+        <a class="button-main" href="#">Log in</a>
+        <a class="button-main" href="#">Cart</button></a>
     </nav>
 </div>
