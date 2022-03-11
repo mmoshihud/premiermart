@@ -11,14 +11,17 @@
                 <th></th>
 
             </tr>
-            <tr>
-                <td>Picture of Product</td>
-                <td>{{ $id }}</td>
-                <td>{{ $name }}</td>
-                <td>{{ $price }}</td>
-                <td>{{ $quantity }}</td>
-                <td><a href="#">Sell</a></td>
-            </tr>
+            @foreach ($order as $o)
+                <tr>
+                    <td>Picture of Product</td>
+                    <td>{{ $o->id }}</td>
+                    <td>{{ $o->name }}</td>
+                    <td>{{ $o->price }}</td>
+                    <td>{{ $o->quantity }}</td>
+                    <td><a href="#">Sell</a></td>
+                </tr>
+            @endforeach
+
         </table>
     </div>
 @endsection
