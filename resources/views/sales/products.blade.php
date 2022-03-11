@@ -9,8 +9,8 @@
                 <th>Image</th>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Price</th>
                 <th>Quantity</th>
+                <th>Price</th>
                 <th>Catagory</th>
 
             </tr>

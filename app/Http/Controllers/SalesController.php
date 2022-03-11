@@ -13,11 +13,8 @@ class SalesController extends Controller
     }
     public function order_view()
     {
-        $name = "Rtx 3080";
-        $id = 1001;
-        $price = "$800";
-        $quantity = 100;
-        return view('sales.orders')->with('name', $name)->with('id', $id)->with('price', $price)->with('quantity', $quantity);
+        $order = Sale::all();
+        return view('sales.orders')->with('order', $order);
     }
     public function product_view()
     {
@@ -34,7 +31,20 @@ class SalesController extends Controller
     }
     public function product_add(Request $req)
     {
-        $req->validate(['currency-field' => 'required' | 'regex:/^[$ 1-9]/']);
-        return redirect("/products");
+        $req->validate(
+            [
+                'name' => 'required',
+                'currency' => 'required|regex:/^[$][1-9]/',
+                'quantity' => 'required',
+                'category' => 'required',
+            ]
+        );
+        $sale = new Sale();
+        $sale->name = $req->name;
+        $sale->price = $req->currency;
+        $sale->quantity = $req->quantity;
+        $sale->category = $req->category;
+        $sale->save();
+        return (redirect('/products'));
     }
 }
