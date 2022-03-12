@@ -4,16 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Order;
 
-class Sale extends Model
+class Order extends Model
 {
     use HasFactory;
-    protected $table = 'products';
+    protected $table = 'orders';
     public $timestamps = false;
     // protected $primaryKey = 'p_id';
-    public function orders()
-    {
-        return $this->hasMany(Order::class, 'id');
-    }
 }

@@ -5,19 +5,19 @@
             <tr>
                 <th>Picture</th>
                 <th>ID</th>
+                <th>PID</th>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Quantity</th>
                 <th></th>
 
             </tr>
             @foreach ($order as $o)
                 <tr>
                     <td>Picture of Product</td>
+                    <td>{{ $o->o_id }}</td>
                     <td>{{ $o->id }}</td>
                     <td>{{ $o->name }}</td>
                     <td>{{ $o->price }}</td>
-                    <td>{{ $o->quantity }}</td>
                     <td><a href="#">Sell</a></td>
                 </tr>
             @endforeach

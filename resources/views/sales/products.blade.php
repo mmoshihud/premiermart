@@ -17,9 +17,9 @@
             @foreach ($data as $d)
                 <tr>
                     <td>Picture of Product</td>
-                    <td>{{ $d->id }}</td>
+                    <td>{{ $d->p_id }}</td>
                     <td>{{ $d->name }}</td>
-                    <td>{{ $d->quantity }}</td>
+                    <td>{{ $d->p_quantity }}</td>
                     <td>{{ $d->price }}</td>
                     <td>{{ $d->category }}</td>
                 </tr>

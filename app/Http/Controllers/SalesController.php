@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Sale;
 
 class SalesController extends Controller
@@ -13,8 +15,10 @@ class SalesController extends Controller
     }
     public function order_view()
     {
-        $order = Sale::all();
-        return view('sales.orders')->with('order', $order);
+        // $orders = Order::with('orders')->get();
+        // $orders = DB::select('select * from orders');
+        $orders = Sale::with('orders')->get();
+        return view('sales.orders', ['order' => $orders]);
     }
     public function product_view()
     {
@@ -42,9 +46,13 @@ class SalesController extends Controller
         $sale = new Sale();
         $sale->name = $req->name;
         $sale->price = $req->currency;
-        $sale->quantity = $req->quantity;
+        $sale->p_quantity = $req->quantity;
         $sale->category = $req->category;
         $sale->save();
         return (redirect('/products'));
+    }
+    public function sell_product()
+    {
+        $sale = DB::select('select * from orders');
     }
 }
