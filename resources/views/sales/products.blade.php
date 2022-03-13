@@ -12,16 +12,18 @@
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Catagory</th>
+                <th></th>
 
             </tr>
             @foreach ($data as $d)
                 <tr>
                     <td>Picture of Product</td>
-                    <td>{{ $d->p_id }}</td>
+                    <td>{{ $d->id }}</td>
                     <td>{{ $d->name }}</td>
                     <td>{{ $d->p_quantity }}</td>
                     <td>{{ $d->price }}</td>
                     <td>{{ $d->category }}</td>
+                    <td><a class="button-main" href="{{ route('product.edit', ['id' => $d->id]) }}">Edit</a></td>
                 </tr>
             @endforeach
         </table>

@@ -13,6 +13,8 @@ Route::get('/orders', [SalesController::class, 'order_view'])->name('orders');
 Route::get('/products', [SalesController::class, 'product_view'])->name('products');
 Route::get('/add/product', [SalesController::class, 'product_submit'])->name('product.submit');
 Route::post('/add/products', [SalesController::class, 'product_add'])->name('product.add');
+Route::get('/products/edit', [SalesController::class, 'edit_product'])->name('product.edit');
+Route::post('/products/edit', [SalesController::class, 'update_product'])->name('product.update');
 
 
 

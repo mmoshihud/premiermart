@@ -5,9 +5,10 @@
             <tr>
                 <th>Picture</th>
                 <th>ID</th>
-                <th>PID</th>
+                <th>P_ID</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Category</th>
                 <th></th>
 
             </tr>
@@ -18,7 +19,8 @@
                     <td>{{ $o->id }}</td>
                     <td>{{ $o->name }}</td>
                     <td>{{ $o->price }}</td>
-                    <td><a href="#">Sell</a></td>
+                    <td>{{ $o->category }}</td>
+                    <td><a class="button-main" href="#">Sell</a></td>
                 </tr>
             @endforeach
 
