@@ -6,12 +6,40 @@ use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Sale;
+use App\Models\Salesman;
 
 class SalesController extends Controller
 {
-    public function dashboard()
+    public function login()
     {
-        return view('sales.dashboard');
+        if (session()->has('username')) {
+            return redirect()->route('dashboard');
+        } else {
+            return view('sales.login');
+        }
+    }
+    public function sales_login(Request $req)
+    {
+        $std = Salesman::where('username', $req->username)->where('password', $req->password)->first();
+        if ($std) {
+            session()->put('username', $std->username);
+            return redirect()->route('dashboard');
+        } else {
+            return view('sales.login');
+        }
+    }
+    public function logout()
+    {
+        session()->flush();
+        return redirect()->route('login');
+    }
+    public function dashboard(Request $req)
+    {
+        if ($req->session()->has('username')) {
+            return view('sales.dashboard');
+        } else {
+            return view('sales.login');
+        }
     }
     public function order_view()
     {

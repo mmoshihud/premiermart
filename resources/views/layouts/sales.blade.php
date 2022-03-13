@@ -14,6 +14,14 @@
         <ul>
             <li><a class="h-items" href="#">Cart</a></li>
             <li><a class="h-items" href="#">Account</a></li>
+            <li>
+                @if (!Session::has('username'))
+                    <a class="button-main" href="{{ route('login') }}">Login</a>
+                @endif
+                @if (Session::has('username'))
+                    <a class="button-main" href="{{ route('log.out') }}">Logut</a>
+                @endif
+            </li>
         </ul>
     </div>
     <div class="page-container">
